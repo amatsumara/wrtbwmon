@@ -74,6 +74,7 @@ rm -r /usr/share/wrtbwmon
 echo 'Cleaning up crontab'
 crontab -u root -l | grep -v "wrtbwmon" > /tmp/crontab.tmp
 crontab -u root /tmp/crontab.tmp
+rm -f /tmp/crontab.tmp
 endef
 
 

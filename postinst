@@ -9,7 +9,7 @@ crontab -u root -l | grep -v "wrtbwmon" > /tmp/crontab.tmp
 echo "* * * * * /usr/sbin/wrtbwmon update /tmp/usage.db" >> /tmp/crontab.tmp
 #echo "*/5 * * * * /usr/sbin/wrtbwmon publish /tmp/usage.db /tmp/usage.htm" >> /tmp/crontab.tmp
 crontab -u root /tmp/crontab.tmp
-rm /tmp/crontab.tmp
+rm -f /tmp/crontab.tmp
 /etc/init.d/cron reload
 
 # Symlink to our webdir
